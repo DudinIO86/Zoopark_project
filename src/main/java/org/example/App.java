@@ -8,6 +8,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Zoopark model=new Zoopark();
+        Display view=new Display();
+        Controller controller=new Controller(view,model);
     }
 }
