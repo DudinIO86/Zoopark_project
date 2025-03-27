@@ -6,13 +6,15 @@ public class Animal {
     private String type;
     private int age;
     private String command;
+    private int id;
 
-    public Animal(String name,String category,String type,int age,String command) {
+    public Animal(String name,String category,String type,int age,String command,int id) {
         this.name=name;
         this.category=category;
         this.type=type;
         this.age=age;
         this.command=command;
+        this.id=id;
     }
 
     public String get_name(){
@@ -29,6 +31,9 @@ public class Animal {
 
     public String get_type(){
         return this.type;
+    }
+    public int get_id(){
+        return this.id;
     }
 
 //    @Override

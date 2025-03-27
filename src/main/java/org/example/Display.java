@@ -24,6 +24,7 @@ public class Display {
         System.out.println("7. Удалить животное");
         System.out.println("8. Скорректировать данные животного");
         System.out.println("9. Завершить работу");
-        System.out.println("Ваш выбор");
+        System.out.println("Ваш выбор: ");
     }
+
 }
