@@ -21,6 +21,24 @@ public class Controller {
                 case 2:
                     model.addAnimal();
                     break;
+                case 3:
+                    model.getListCommandAnimal(view.selectAnimalMenu());
+                    break;
+                case 4:
+                    model.learnNewCommandAnimal(view.selectAnimalMenu());
+                    break;
+                case 5:
+                    model.showAnimalCategory();
+                    break;
+                case 6:
+                    model.getFullInfoAnimal(view.selectAnimalMenu());
+                    break;
+                case 7:
+                    model.delAnimal(view.selectAnimalMenu());
+                    break;
+                case 8:
+                    model.correctAnimal(view.selectAnimalMenu());
+                    break;
                 case 9:
                     flag=false;
                 default:

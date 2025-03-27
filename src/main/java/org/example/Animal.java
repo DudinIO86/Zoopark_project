@@ -20,6 +20,9 @@ public class Animal {
     public String get_name(){
         return this.name;
     }
+    public String get_command(){
+        return this.command;
+    }
 
     public String get_category(){
         return this.category;
@@ -36,9 +39,5 @@ public class Animal {
         return this.id;
     }
 
-//    @Override
-//    public String toString(){
-//        return "Название книги: "+title+"\n"+"Автор: "+author+"\n"+"Год издания: "+publishedYear+"\n";
-//    }
 
 }

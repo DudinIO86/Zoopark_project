@@ -1,5 +1,6 @@
 package org.example;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -31,18 +32,33 @@ public class Zoopark implements Commands {
         zoo.add(animal);
     }
     public void getListAnimal(){
-        Iterator<Animal> iterator=zoo.iterator();
-        System.out.println("Ваш список животных:");
-        while(iterator.hasNext()){
-            Animal zoo=iterator.next();
-            System.out.println(zoo.get_id()+". "+zoo.get_name());
+        if (zoo.isEmpty()){
+            System.out.println("Животных в зоопарке нет");
+        } else {
+            Iterator<Animal> iterator = zoo.iterator();
+            System.out.println("Ваш список животных:");
+            while (iterator.hasNext()) {
+                Animal zoo = iterator.next();
+                System.out.println(zoo.get_id() + ". " + zoo.get_name());
+            }
         }
     };
     public void getListCommandAnimal(int numberAnimal){};
-    public void learnNewCommandAnimal(int numberAnimal, String command){};
+
+    public void learnNewCommandAnimal(int numberAnimal){};
+
     public void showAnimalCategory(){};
-    public void getFullInfoAnimal(int numberAnimal){};
+
+    public void getFullInfoAnimal(int numberAnimal){
+            System.out.println("Номер животного: " + zoo.get(numberAnimal).get_id());
+            System.out.println("Имя животного: " + zoo.get(numberAnimal).get_name());
+            System.out.println("Категория животного: " + zoo.get(numberAnimal).get_category());
+            System.out.println("Тип животного: " + zoo.get(numberAnimal).get_type());
+            System.out.println("Возраст животного: " + zoo.get(numberAnimal).get_age());
+            System.out.println("Комманды животного: " + zoo.get(numberAnimal).get_command() + "\n");
+    };
     public void delAnimal(int numberAnimal){};
+
     public void correctAnimal(int numberAnimal){};
 
 }
